@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class Banks{
+	int balance=0;
+	void checkbalance() {
+		System.out.println(balance);
+	}
+	void deposite(int a) {
+		balance=balance+a;
+	}
+	void withdraw(int a) {
+		balance=balance-a;
+	}
+}
+public class bank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		Banks c1=new Banks();
+		int ch=0;
+		do {
+		System.out.println("enter 1.deposite \n enter 2.withdraw \n enter 3.balance \n enter 4.exit");
+		 ch=sc.nextInt();
+		 
+			if(ch==1) {
+				System.out.println("enter amount: ");
+				int am=sc.nextInt();
+				c1.deposite(am);
+				
+
+				
+			}
+			else if(ch==2) {
+				System.out.println("enter amount: ");
+				int am=sc.nextInt();
+				c1.withdraw(am);
+				
+			}
+			else if(ch==3) {
+				c1.checkbalance();
+			}
+		}while(ch!=4);
+
+	}
+
+}
