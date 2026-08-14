@@ -1,0 +1,10 @@
+class Solution {
+    public char findTheDifference(String s, String t) {
+         int sum=0;int sum1=0;
+         for(char c:t.toCharArray())
+         sum=sum+c-'a';
+         for(char c: s.toCharArray())
+         sum1=sum1+c-'a';
+         return (char)(sum-sum1+'a');       
+  }
+}
