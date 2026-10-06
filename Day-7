@@ -1,0 +1,25 @@
+
+import java.util.*;
+public class  happynumber {
+	public static void main(String[] args) {
+		HashSet<Integer>h=new HashSet<>();
+		int n=2;
+		while(n!=1) {
+			if(h.contains(n)) {
+				System.out.println("false");
+				return;
+			}
+			h.add(n);
+		
+		int sum=0;
+		while(n>0) {
+			int rem=n%10;
+			sum=sum+rem*rem;
+			n=n/10;
+		}
+		n=sum;
+		}
+		System.out.println("true");
+		 
+	}
+	}
