@@ -1,0 +1,29 @@
+import java.util.*;
+public class largestrepeatingsubstring {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s="banana";
+		int length=0;
+		String  largest="";
+		HashSet<String>h=new HashSet<>();
+		ArrayList<String>a=new ArrayList<>();
+		for(int i=0;i<s.length();i++) {
+			for(int j=i+1;j<=s.length();j++) {
+				String s1=s.substring(i,j);
+			
+				if(h.contains(s1)) {
+					a.add(s1);
+					if(s1.length()>length) {
+						length=s1.length();
+						largest=s1;
+						 
+				}
+				}
+				h.add(s1);
+					 
+			 
+			}
+		}
+		System.out.println(largest);
+	}
+	}
